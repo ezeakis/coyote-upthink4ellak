@@ -21,9 +21,14 @@
 
 1. Ζώνη
 2. [Αισθητήρα υπερήχων](https://grobotronics.com/ultrasonic-sensor-sr04.html) 2.5 euros
-3. Buzzer
-4. Raspberry Pi Zero και SD Card
-5. Θήκη μπαταριών και μπαταρίες
-6. Micro USB Adaptor
-7. Καλώδια, breadboard κι αντιστάσεις
+3. [Buzzer](https://grobotronics.com/buzzer-5v.html?sl=en) 0.4 euros
+4. [Raspberry Pi Zero with headers](https://nettop.gr/index.php/component/virtuemart/raspberry-pi-zero-w-with-headers.html?Itemid=1678) 14.70 euros
+5. [SD Card](https://grobotronics.com/microsdhc-16gb-class-10-sandisk-ultra-sdsquar-sdsquar-016g-gn6ma.html) 8.90 euros
+6. [Θήκη μπαταριών 3 ΑΑΑ](https://grobotronics.com/battery-holder-3xa-with-wires.html)
+7. [Micro USB Adaptor](https://grobotronics.com/usb-micro-to-jack-female-5.5x2.1.html?sl=en) 1.20 euros
+8. Καλώδια
+9. Breadboard
+10. Αντιστάσεις
+11. Μπαταρίες
+
 
