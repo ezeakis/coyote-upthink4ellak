@@ -30,7 +30,7 @@
 9. [Breadboard](https://grobotronics.com/breadboard-mini-white.html) 1.60 euros
 10. [Αντίσταση 220 Ohm](https://grobotronics.com/carbon-1-4w-5-220ohm.html) 0.01 euros
 11. [Αντίσταση 330 Ohm](https://grobotronics.com/carbon-1-4w-5-330ohm.html) 0.01 euros
-12. 3 μπαταρίες 1.5V AAA(https://grobotronics.com/battery-varta-alkaline-longlife-lr61-1.5v-aaa-4pack.html) 2.20 euros το σετ των τεσσάρων
+12. [3 μπαταρίες 1.5V AAA](https://grobotronics.com/battery-varta-alkaline-longlife-lr61-1.5v-aaa-4pack.html) 2.20 euros το σετ των τεσσάρων
 
 Σύνολο: 33.92 euros
 
