@@ -20,7 +20,7 @@
 **Υλικά**
 
 1. Ζώνη
-2. Αισθητήρα υπερήχων https://grobotronics.com/ultrasonic-sensor-sr04.html 2.5 euros
+2. [Αισθητήρα υπερήχων](https://grobotronics.com/ultrasonic-sensor-sr04.html) 2.5 euros
 3. Buzzer
 4. Raspberry Pi Zero και SD Card
 5. Θήκη μπαταριών και μπαταρίες
