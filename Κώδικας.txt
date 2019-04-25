@@ -1,0 +1,31 @@
+﻿int echoPin = 12; // Πιν Echo της πλακέτας υπερήχων
+int trigPin = 13; // Πιν Trigger της πλακέτας υπερήχων
+int alarmPin = 5; // Βομβητής
+int alarmRange=30; // Η απόσταστη στην οποία θα χτυπήσει συναγερμός
+float duration, distance;
+
+void setup() {
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  pinMode(alarmPin, OUTPUT);
+  Serial.begin(9600);//επικοινωνία με τη σειριακή οθόνη
+}
+
+void loop() {
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  duration = pulseIn(echoPin, HIGH);
+  
+  //Υπολογισμός απόστασης (σε cm) βασιζόμενοι στην ταχύτητα του ήχου.
+  distance = duration/58.2;
+
+    Serial.println(distance,2);
+    if(distance<alarmRange)
+      digitalWrite(5,HIGH); // Άναψε το βομβητή
+    else
+      digitalWrite(5,LOW); // Σβήσε το βομβητή
+   delay(50);  //Καθυστέρηση 50ms πριν την επόμενη ανάγνωση
+}

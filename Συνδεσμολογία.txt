@@ -1,0 +1,14 @@
+Συνδεσμολογία του Breadboard
+Arduino 5V --> σε κάποιο σημείο στο breadboard (στο εξής θα λέγεται "τάση του breadboard")
+Arduino GND --> σε κάποιο σημείο στο breadboard  (στο εξής θα λέγεται "γη του breadboard")
+
+Συνδεσμολογία του Αισθητήρα
+VCC -> Τάση του Breadboard
+GND --> Γη του Breadboard
+TRIG --> Arduino 13
+ECHO --> Arduino 12
+
+Συνδεσμολογία του Buzzer
+Αρνητικό ποδαράκι --> Γη του Breadboard
+Θετικό ποδαράκι --> Arduino 5
+
