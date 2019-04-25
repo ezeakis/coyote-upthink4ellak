@@ -1,31 +1,34 @@
-﻿int echoPin = 12; // Πιν Echo της πλακέτας υπερήχων
-int trigPin = 13; // Πιν Trigger της πλακέτας υπερήχων
-int alarmPin = 5; // Βομβητής
-int alarmRange=30; // Η απόσταστη στην οποία θα χτυπήσει συναγερμός
-float duration, distance;
+﻿int echoPin = 12; // Ο αριθμός για το pin Echo της πλακέτας υπερήχων
+int trigPin = 13; // Ο αριθμός για το pin Trigger της πλακέτας υπερήχων
+int alarmPin = 5; // Ο αριθμός για το Buzzer
+int alarmRange=30; // Η απόσταση στην οποία θα χτυπήσει συναγερμός
+float duration, distance; //Ο χρόνος που κάνει ο παλμός να επιστρέψει και η απόσταση που υπολογίζουμε από αυτή
 
 void setup() {
-  pinMode(trigPin, OUTPUT);
-  pinMode(echoPin, INPUT);
-  pinMode(alarmPin, OUTPUT);
-  Serial.begin(9600);//επικοινωνία με τη σειριακή οθόνη
+pinMode(trigPin, OUTPUT); //Το pin για το Trigger
+pinMode(echoPin, INPUT); //Το pin για το Echo
+pinMode(alarmPin, OUTPUT); //Το pin για το Buzzer
+Serial.begin(9600); //επικοινωνία με τη σειριακή οθόνη για να βλέπουμε τα μηνύματα
 }
 
 void loop() {
-  digitalWrite(trigPin, LOW);
-  delayMicroseconds(2);
-  digitalWrite(trigPin, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(trigPin, LOW);
-  duration = pulseIn(echoPin, HIGH);
-  
-  //Υπολογισμός απόστασης (σε cm) βασιζόμενοι στην ταχύτητα του ήχου.
-  distance = duration/58.2;
+//Δημιουργία του παλμού που στέλνει ο αισθητήρας
+digitalWrite(trigPin, LOW);
+delayMicroseconds(2);
+digitalWrite(trigPin, HIGH);
+delayMicroseconds(10);
+digitalWrite(trigPin, LOW);
+//Επιστροφή του παλμού και υπολογισμός του χρόνου που χρειάστηκε
+duration = pulseIn(echoPin, HIGH);
 
-    Serial.println(distance,2);
-    if(distance<alarmRange)
-      digitalWrite(5,HIGH); // Άναψε το βομβητή
-    else
-      digitalWrite(5,LOW); // Σβήσε το βομβητή
-   delay(50);  //Καθυστέρηση 50ms πριν την επόμενη ανάγνωση
+//Υπολογισμός της απόστασης (σε cm) από τον χρόνο που έκανε να επιστρέψει ο παλμός και την ταχύτητα του ήχου.
+distance = duration/58.2;
+
+Serial.println(distance,2); //Εμφάνιση της απόστασης στην οθόνη
+
+if(distance<alarmRange) //Αν η απόσταση είναι μικρότερη από αυτή που θέλουμε
+digitalWrite(5,HIGH); // Άναψε το buzzer
+else //αλλιώς
+digitalWrite(5,LOW); // Σβήσε το buzzer
+delay(50); //Περίμενε λιγο (50ms) πριν ξαναμετρήσεις
 }
