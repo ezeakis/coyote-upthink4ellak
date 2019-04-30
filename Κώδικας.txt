@@ -27,8 +27,8 @@ distance = duration/58.2;
 Serial.println(distance,2); //Εμφάνιση της απόστασης στην οθόνη
 
 if(distance<alarmRange) //Αν η απόσταση είναι μικρότερη από αυτή που θέλουμε
-digitalWrite(5,HIGH); // Άναψε το buzzer
+digitalWrite(alarmPin,HIGH); // Άναψε το buzzer
 else //αλλιώς
-digitalWrite(5,LOW); // Σβήσε το buzzer
+digitalWrite(alarmPin,LOW); // Σβήσε το buzzer
 delay(50); //Περίμενε λιγο (50ms) πριν ξαναμετρήσεις
 }
